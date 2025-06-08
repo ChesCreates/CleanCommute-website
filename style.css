@@ -1,0 +1,324 @@
+
+    :root {
+      --green-dark: #25714A;
+      --green-light: #3CB878;
+      --off-white: #FCFBFC;
+      --white: #FFFFFF;
+      --font-roboto: 'Roboto', sans-serif;
+      --font-arima: 'Arima', cursive;
+      --font-marvel: 'Marvel', sans-serif;
+      --font-ropa: 'Ropa Sans', sans-serif;
+      --font-manrope: 'Manrope', sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .info {
+      font-family: var(--font-roboto);
+      color: var(--green-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 1000px;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: bolder;
+    }
+    span {
+      color: var(--green-dark);
+    }
+    body {
+      font-family: var(--font-manrope);
+      background-color: var(--off-white);
+      color: var(--green-dark);
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--white);
+      color: var(--white);
+      padding-left: 50px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 5px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .nav-links a {
+      color: black;
+      text-decoration: none;
+      font-family: var(--font-manrope);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    a .btn {
+      display: flex;
+      align-items: center;
+    }
+    .btn {
+      background-color: var(--green-light);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: var(--font-manrope);
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(to right, var(--green-dark), var(--green-light));
+      color: var(--white);
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+    .hero h1 {
+      font-family: var(--font-roboto);
+      font-size: 64px;
+      font-weight: bold;
+      line-height: 75px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-family: var(--font-roboto);
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .hero .hero-img {
+      width: 579px;
+      height: 432px;
+      align-items: end;
+      border-radius: 10px;
+    }
+    section {
+      padding: 3rem 2rem;
+    }
+    .our-story {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 30px;
+      padding-right: 70px;
+      margin-top: 50px;
+    }
+    .about h2 {
+      font-family: var(--font-roboto);
+      font-weight: bold;
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+    .about p {
+      width: 496px;
+      text-align: justify;
+      font-family: var(--font-arima);
+      font-size: 24px;
+      font-weight: bold;
+      color: #7A7B79;
+    }
+    .mission-vision {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .our-mission, .our-vision {
+      border: solid;
+      border-width: 3px;
+      border-color: #D6D6D6;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      padding: 20px;
+      width: 520px;
+    }
+    .our-mission h3, .our-vision h3 {
+      font-family: var(--font-roboto);
+      font-weight: bold;
+      font-size: 36px;
+      color: var(--green-light);
+    }
+    .our-mission p, .our-vision p {
+      font-family: var(--font-arima);
+      font-size: 24px;
+      color: #7A7B79;
+      width: 495px;
+      padding-right: 15px;
+    }
+    .solution h2, .team h2, .testimonials h2, .how-it-works h2 {
+      font-weight: bold;
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .how-it-works h2 {
+      text-align: left;
+      font-size: 40px;
+    }
+    .how-it-works {
+      position: relative;
+      overflow: hidden;
+    }
+    .steps-carousel {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .carousel-track-container {
+      overflow: hidden;
+      width: 100%;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .step-card {
+      min-width: 100%;
+      padding: 2rem;
+      background-color: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    .carousel-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--green-dark);
+      cursor: pointer;
+      padding: 0 1rem;
+    }
+    .solution .quote-2 {
+      font-family: var(--font-arima);
+      font-size: 48px;
+      font-weight: 500;
+      color: #797979;
+    }
+    .team h2 {
+      margin-bottom: 20px;
+    }
+    .team .quote-3 {
+      font-family: var(--font-arima);
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 50px;
+      border-top: solid;
+      border-color: var(--green-light);
+      border-width: 5px;
+      padding-top: 20px;
+      color: #797979;
+    }
+    .profile {
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+    }
+    .member .role {
+      font-family: var(--font-marvel);
+    }
+    .member .description {
+      font-family: var(--font-ropa);
+    }
+    h2, h3, h4 {
+      font-family: var(--font-roboto);
+    }
+    .cards, .team-grid, .steps, .reviews {
+      display: grid;
+      gap: 2rem;
+    }
+    .cards {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .cards h4 {
+      font-size: 36px;
+    }
+    .cards .quote {
+      font-family: var(--font-marvel);
+      font-size: 24px;
+    }
+    .cards .description {
+      font-family: var(--font-ropa);
+      font-size: 24px;
+      text-align: center;
+    }
+    .card {
+      background-color: var(--white);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .card .icon {
+      width: 92px;
+    }
+    .team-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .member {
+      background-color: var(--white);
+      padding: 1rem;
+      border-left: 5px solid var(--green-light);
+    }
+    .how-it-works .steps {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .testimonials blockquote {
+      background: var(--white);
+      padding: 1rem;
+      border-left: 4px solid var(--green-dark);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: var(--font-ropa);
+    }
+    button {
+      padding: 0.75rem;
+      background-color: var(--green-dark);
+      color: var(--white);
+      border: none;
+      border-radius: 5px;
+      font-family: var(--font-manrope);
+    }
+    footer {
+      background-color: var(--green-dark);
+      color: var(--white);
+      padding: 2rem;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+    }
+    footer a {
+      color: var(--white);
+      text-decoration: none;
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      font-family: var(--font-marvel);
+    }
