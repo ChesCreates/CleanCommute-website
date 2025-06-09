@@ -26,6 +26,7 @@
     .logo {
       font-size: 26px;
       font-weight: bolder;
+      cursor: pointer;
     }
     span {
       color: var(--green-dark);
@@ -35,8 +36,15 @@
       background-color: var(--off-white);
       color: var(--green-dark);
       line-height: 1.6;
+      margin-top: 50px;
     }
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      border-bottom: 3px solid rgba(0, 0, 0, 0.1);
       background-color: var(--white);
       color: var(--white);
       padding-left: 50px;
@@ -82,10 +90,16 @@
       align-items: center;
       text-align: center;
       padding: 4rem 2rem;
-      background: linear-gradient(to right, var(--green-dark), var(--green-light));
-      color: var(--white);
+      background-color: #F7F8F8;
+      color: var(--green-dark);
       padding-left: 100px;
       padding-right: 100px;
+    }
+    .hero-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
     }
     .hero h1 {
       font-family: var(--font-roboto);
@@ -102,9 +116,7 @@
       letter-spacing: 1px;
       margin-bottom: 20px;
     }
-    .hero .hero-img {
-      width: 579px;
-      height: 432px;
+    .hero-img {
       align-items: end;
       border-radius: 10px;
     }
@@ -117,6 +129,7 @@
       padding-left: 30px;
       padding-right: 70px;
       margin-top: 50px;
+      background-color: var(--white);
     }
     .about h2 {
       font-family: var(--font-roboto);
@@ -158,6 +171,9 @@
       width: 495px;
       padding-right: 15px;
     }
+    .solution, .how-it-works, .contact {
+      background-color: #F7F8F8;
+    }
     .solution h2, .team h2, .testimonials h2, .how-it-works h2 {
       font-weight: bold;
       font-size: 48px;
@@ -165,7 +181,6 @@
       margin-bottom: 60px;
     }
     .how-it-works h2 {
-      text-align: left;
       font-size: 40px;
     }
     .how-it-works {
@@ -201,11 +216,14 @@
       cursor: pointer;
       padding: 0 1rem;
     }
-    .solution .quote-2 {
+    .solution .quote-2, footer .quote-2 {
       font-family: var(--font-arima);
       font-size: 48px;
       font-weight: 500;
       color: #797979;
+    }
+    footer .quote-2 {
+      font-size: 24px;
     }
     .team h2 {
       margin-bottom: 20px;
@@ -220,6 +238,29 @@
       border-width: 5px;
       padding-top: 20px;
       color: #797979;
+    }
+    .member, .card{
+      position: relative;
+      background-color: #FCFBFC;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+    .member:hover, .card:hover {
+      transform: translateY(-5px);
+    }
+    .card:hover {
+      cursor: pointer;
+    }
+    .linkedin-icon {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .member:hover .linkedin-icon {
+      opacity: 1;
     }
     .profile {
       width: 100px;
@@ -262,24 +303,100 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    .card p {
+      color: black;
+    }
     .card .icon {
       width: 92px;
     }
+    .step-card h4 {
+      color: var(--green-light);
+    }
+    .step-card p {
+      color: black;
+    }
     .team-grid {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .reviews {
+      display: flex;
+      gap: 10px;
     }
     .member {
       background-color: var(--white);
       padding: 1rem;
       border-left: 5px solid var(--green-light);
     }
+    .member p {
+      color: black;
+    }
     .how-it-works .steps {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    .testimonials blockquote {
+    .testimonials {
+      background-color: var(--white);
+    }
+    .testimonial-filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+    .filter-btn {
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      transform: translateY(-2px);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      transform: translateY(-2px);
+      background: var(--white);
+      color: var(--green-dark);
+    }
+    .filter-btn.active {
+      border: solid;
+      border-color: var(--green-dark);
+    }
+    .testimonials .review-card {
       background: var(--white);
       padding: 1rem;
-      border-left: 4px solid var(--green-dark);
+      border: 1px solid var(--green-dark);
+      border-radius: 20px;
+      width: 450px;
+      text-align: center;
+    }
+    .testimonials footer {
+      border-radius: 20px;
+      color: var(--green-dark);
+      background-color: var(--white);
+      padding: 0;
+      padding-top: 10px;
+      font-weight: bold;
+    }
+    .testimonials h2 {
+      margin-bottom: 30px;
+    }
+    .review-card p {
+      color: black;
+    }
+    .contact {
+      display: flex;
+      column-gap: 100px;
+      margin-right: 0;
+    }
+    .goals {
+      margin-bottom: 20px;
+    }
+    .goals h2 {
+      font-size: 36px;
+    }
+    .goals .goals-list {
+      font-family: var(--font-marvel);
+      font-size: 20px;
+    }
+    .goals-list {
+      color: black;
     }
     form {
       display: flex;
@@ -287,12 +404,32 @@
       gap: 1rem;
       max-width: 500px;
       margin-top: 1rem;
+      margin-left: 50px;
+      background-color: var(--white);
+      border: solid;
+      border-color: #D6D6D6;
+      border-radius: 8px;
+      border-width: 3px;
+      padding: 25px;
+      width: 500px;
+      height: 350px;
     }
     input, textarea {
       padding: 0.75rem;
       border: 1px solid #ccc;
       border-radius: 5px;
       font-family: var(--font-ropa);
+    }
+    .clover-chatbot {
+      font-family: var(--font-marvel);
+      font-size: 16px;
+      height: 50px;
+      width: 205px;
+      border-color: var(--green-light);
+      padding: 5px;
+    }
+    textarea {
+      margin-bottom: 20px;
     }
     button {
       padding: 0.75rem;
@@ -301,24 +438,83 @@
       border: none;
       border-radius: 5px;
       font-family: var(--font-manrope);
+      cursor: pointer;
     }
     footer {
-      background-color: var(--green-dark);
-      color: var(--white);
+      background-color: var(--white);
+      color: black;
       padding: 2rem;
     }
-    .footer-content {
+    .footer-content .logo {
+      font-family: var(--font-roboto);
+      font-weight: bold;
+      font-size: 36px;
+      color: var(--green-light);
+    }
+    .footer-content .location {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--font-marvel);
+      font-size: 20px;
+      line-height: 23px;
+      margin-top: 10px;
+    }
+    .send-button {
+      padding: 5px;
+      width: 40px;
+      border-radius: 10px;
+      background-color: var(--white);
+      margin-top: 10px;
+    }
+    .footer-info {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(3, minmax(180px, 200px));
+      margin-top: 40px;
+      border: solid;
+      border-color: var(--green-light);
+      border-width: 1.5px;
+      border-radius: 20px;
+      width: 540px;
+      padding: 20px;
+      padding-left: 30px;
+    }
+    .company-info {
+      display: flex;
+      justify-content: space-between;
+    }
+    .info-card {
+      display: block;
+      width: 150px;
+      font-family: var(--font-arima);
+    }
+    .info-card h4 {
+      font-family: var(--font-arima);
+      font-weight: bold;
+      font-size: 24px;
+      color: var(--green-dark);
+    }
+    .info-card a {
+      font-family: var(--font-arima);
     }
     footer a {
-      color: var(--white);
+      color: black;
       text-decoration: none;
     }
+    .social-info {
+      display: flex;
+      justify-content: space-between;
+    }
+    .social-icons {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(100px, 0px));
+      padding-left: 30px;
+      cursor: pointer;
+    }
     .copyright {
-      text-align: center;
+      text-align: right;
       margin-top: 2rem;
-      font-size: 0.9rem;
-      font-family: var(--font-marvel);
+      font-size: 16px;
+      font-family: var(--font-arima);
+      color: var(--green-dark);
     }

@@ -25,12 +25,16 @@
 
   <main>
     <section class="hero">
-      <div>
-        <h1>Smarter Rides.<br>Greener Cities.</h1>
-        <p>With CleanCommute</p>
-        <a href="#about" class="btn">Join the Movement</a>
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>Smarter Rides.<br>Greener Cities.</h1>
+          <p>With CleanCommute</p>
+          <a href="#about" class="btn">Join the Movement</a>
+        </div>
+        <div class="hero-image">
+          <img class="hero-img" src="images/greenTransport.jpg" width="530px">
+        </div>
       </div>
-      <img class="hero-img" src="images/greenTransport.jpg">
     </section>
 
     <div class="our-story">
@@ -96,6 +100,9 @@
         for smarter, greener cities.”</p>
       <div class="team-grid">
         <div class="member">
+          <a href="https://ke.linkedin.com/in/chesney-owino-941a811b5" target="_blank" class="linkedin-icon" aria-label="LinkedIn">
+            <img src="images/linkedin-box-fill.svg" width="40">
+          </a>
           <div>
             <img class="profile" src="images/founderCEO.jpg">
           </div>
@@ -105,6 +112,9 @@
             for a cleaner commute future.</p>
         </div>
         <div class="member">
+          <a href="https://ke.linkedin.com/in/ushindi-kombe-4b1325241" target="_blank" class="linkedin-icon" aria-label="LinkedIn">
+            <img src="images/linkedin-box-fill.svg" width="40">
+          </a>
           <div>
             <img class="profile" src="images/productLead.jpg">
           </div>
@@ -114,6 +124,9 @@
             bike rental, and carbon tracker features.</p>
         </div>
         <div class="member">
+          <a href="" target="_blank" class="linkedin-icon" aria-label="LinkedIn">
+            <img src="images/linkedin-box-fill.svg" width="40">
+          </a>
           <div>
             <img class="profile" src="images/leadDeveloper.jpg">
           </div>
@@ -123,6 +136,9 @@
             ensuring smooth, scalable tech.</p>
         </div>
         <div class="member">
+          <a href="https://ke.linkedin.com/in/hope-macharia-837163252" target="_blank" class="linkedin-icon" aria-label="LinkedIn">
+            <img src="images/linkedin-box-fill.svg" width="40">
+          </a>
           <div>
             <img class="profile" src="images/c&gManager.jpg">
           </div>
@@ -137,7 +153,9 @@
     <section class="how-it-works">
       <h2>How CleanCommute Works</h2>
       <div class="steps-carousel">
-        <button class="carousel-btn prev" aria-label="Previous">~</button>
+        <button class="carousel-btn prev" aria-label="Previous">
+          <img src="images/circle-arrow-left.svg">
+        </button>
 
         <div class="carousel-track-container">
           <div class="carousel-track">
@@ -167,89 +185,136 @@
           </div>
         </div>
 
-        <button class="carousel-btn next" aria-label="Next">~</button>
+        <button class="carousel-btn next" aria-label="Next">
+          <img src="images/circle-arrow-right.svg">
+        </button>
       </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
       <h2>"What Our Riders Are Saying"</h2>
+      <div class="testimonial-filters">
+        <button class="filter-btn active" onclick="filterTestimonials('all', this)">
+          All
+        </button>
+        <button class="filter-btn" onclick="filterTestimonials('students', this)">
+          Students
+        </button>
+        <button class="filter-btn" onclick="filterTestimonials('workers', this)">
+          Workers
+        </button>
+      </div>
       <div class="reviews">
-        <blockquote>
+        <div class="review-card" data-category="students">
           <p>“CleanCommute helped me cut my transport budget in half - 
-            and I’ve made new friends on the way to class!”</p>
-          <footer>– Lilyjoy K., Student</footer>
-        </blockquote>
-        <blockquote>
-          <p>“I never thought I’d enjoy commuting. 
+            and I've made new friends on the way to class!”</p>
+          <footer>- Lilyjoy K., Student</footer>
+        </div>
+        <div class="review-card" data-category="workers">
+          <p>“I never thought I'd enjoy commuting. 
             Now I track my carbon savings like a game.”</p>
-          <footer>– Linet M., Office Worker</footer>
-        </blockquote>
-        <blockquote>
-          <p>“It’s simple, reliable, and sustainable. 
+          <footer>- Linet M., Office Worker</footer>
+        </div>
+        <div class="review-card" data-category="workers">
+          <p>“It's simple, reliable, and sustainable. 
             A must-have for any city dweller.”</p>
-          <footer>– Collins N., Freelancer</footer>
-        </blockquote>
-        <blockquote>
+          <footer>- Collins N., Freelancer</footer>
+        </div>
+        <div class="review-card" data-category="students">
           <p>“The bike rentals are fast, cheap, and perfect for campus runs. 
-            I feel good knowing I’m saving the planet too.”</p>
-          <footer>– Vince M., Student</footer>
-        </blockquote>
+            I feel good knowing I'm saving the planet too.”</p>
+          <footer>- Vince M., Student</footer>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <div class="goals">
-        <ul>
-          <li>Reach 1000 active users in Nairobi</li>
-          <li>Form partnerships with 2 Nairobi universities</li>
-          <li>Partner with 1 carbon offset or environmental NGO</li>
-        </ul>
-      </div>
       <form>
+        <h2>Contact Us</h2>
         <input type="text" name="name" placeholder="Name" required />
         <input type="email" name="email" placeholder="Email" required />
         <textarea name="message" placeholder="Message" required></textarea>
         <button type="submit">Submit</button>
       </form>
+      <div class="goals-container">
+        <div class="goals">
+          <h2>Our Goals for a Cleaner Commute</h2>
+          <ul class="goals-list">
+            <li>Reach 1000 active users in Nairobi</li>
+            <li>Form partnerships with 2 Nairobi universities</li>
+            <li>Partner with 1 carbon offset or environmental NGO</li>
+          </ul>
+        </div>
+        <div class="goals">
+          <h2>Partner with Us</h2>
+          <p class="goals-list">
+            Whether you're commuting to class or heading to work, 
+            there's a place for you in the CleanCommute community.
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
     <section class="footer-content">
-      <div>
-        <h3>CleanCommute</h3>
-        <p>“When purpose meets motion...”</p>
-        <p>Senteu Plaza, Galana Rd, Nairobi, Kenya</p>
-        <p>Chat with Clover – Our AI assistant</p>
+      <div class="company-info">
+        <div>
+          <div class="logo">Clean<span>Commute</span></div>
+          <div>
+            <p class="quote-2">“When purpose meets motion, even the <br>smallest ride can spark a revolution”</p>
+          </div>
+          <div class="location">
+            <img src="images/map-pin.svg" width="40px">
+            <p>Senteu Plaza, Galana Rd,<br> Nairobi, Kenya</p>
+          </div>
+        </div>
+        <div>
+          <input class="clover-chatbot" type="text" name="chat" 
+          placeholder="Chat with Clover - Our AI assistant"/>
+          <button class="send-button"><img src="images/send.svg" width="22px"></button>
+        </div>
       </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="#">Carpool Match</a></li>
-          <li><a href="#">Bike Rentals</a></li>
-          <li><a href="#">Carbon Tracker</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="#">Help Center / FAQs</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
+      <div class="footer-info">
+        <div class="info-card">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">How it Works</a></li>
+            <li><a href="#">Carpool Match</a></li>
+            <li><a href="#">Bike Rentals</a></li>
+            <li><a href="#">Carbon Tracker</a></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help Center / FAQs</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
       </div>
     </section>
-    <p class="copyright">© 2025 CleanCommute. All rights reserved.</p>
+    <div class="social-info">
+      <div class="social-icons">
+        <img src="images/instagram.svg" width="40px">
+        <img src="images/twitter-x-line.svg" width="40px">
+        <img src="images/linkedin-box-fill.svg" width="40px">
+        <img src="images/github.svg" width="40px">
+      </div>
+      <div>
+        <p class="copyright">© 2025 CleanCommute. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
